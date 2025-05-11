@@ -21,7 +21,7 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<String> createProduct(@Valid @RequestBody ProductRequestDto productRequestDto){
-        log.info("POST createProduct");
+        log.info("HTTP Request Received: POST createProduct");
         return ResponseEntity.ok().body(""+productService.createProduct(productRequestDto));
     }
 }
